@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+    mssql:
+        container_name: mssql
+        image: mcr.microsoft.com/mssql/server
+        environment:
+            - SA_PASSWORD=PAssw0rd!
+            - ACCEPT_EULA=Y
+        ports:
+            - '1433:1433'
+volumes:
+    mssql:
+        driver: local
