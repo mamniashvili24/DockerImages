@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+    mongo:
+        container_name: mongo
+        image: mongo:latest
+        environment:
+            - MONGO_INITDB_ROOT_USERNAME=admin
+            - MONGO_INITDB_ROOT_PASSWORD=PAssw0rd!
+        ports:
+            - '27017:27017'
+        volumes:
+            - mongo:/data/db
+volumes:
+    mongo:
+        driver: local
